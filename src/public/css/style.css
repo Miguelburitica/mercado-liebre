@@ -169,6 +169,7 @@ a {
   margin-bottom: 15px;
 }
 
+
 .main-main .content .main-article .title-section {
   color: #666;
   font-size: 30px;
@@ -189,6 +190,7 @@ a {
 }
 
 .main-main .content .main-article .article-cards:hover {
+  box-shadow: 0px 0px 12px rgb(70, 70, 70);
   width: 96%;
 }
 
@@ -216,6 +218,11 @@ a {
   position: absolute;
   right: 20px;
   top: -15px;
+  transition: .5s ease-in-out all;
+}
+
+.main-main .content .main-article .article-cards .caracteristics-article i:hover{
+  transform: rotate(-810deg);
 }
 
 .main-main .content .main-article .article-cards .caracteristics-article .for-pay {
@@ -235,6 +242,11 @@ a {
 
 .main-main .content .main-article .article-cards .caracteristics-article .descripcion {
   display: none;
+  transition: all .3s ease;
+}
+
+.main-main .content .main-article .article-cards:hover .caracteristics-article .descripcion {
+  display: block;
 }
 
 /* Final Main */
@@ -609,7 +621,7 @@ a {
   align-items: center;
   gap: 10px;
   padding: 35px 10px;
-  margin-bottom: 25px;
+  margin-bottom: 25px;                            
 }
 
 .login-main .login label {
