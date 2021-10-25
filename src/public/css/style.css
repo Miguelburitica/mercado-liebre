@@ -243,7 +243,7 @@ a {
 
 .main-main .content .main-article .article-cards .caracteristics-article .descripcion {
   position: absolute;
-  transition: position .2s ease, opacity 0s ease, margin-top .2s ease;
+  transition:  opacity 0s ease, margin-top .2s ease;
   opacity: 0;
 }
 
@@ -336,10 +336,16 @@ a {
     display: flex;
   }
 
+  .main-header .content .nav-bar ul a {
+    text-decoration: none;
+  }
+
   .main-header .content .nav-bar ul li {
     padding: 4px calc(3px + 0.15vw) 4px calc(3px + 0.15vw);
     color: #03264c;
     transition: .4s ease all;
+    cursor: pointer;
+    font-size: calc(8px + 0.6vw);
   }
 
   .main-header .content .nav-bar ul li:hover {
@@ -358,11 +364,6 @@ a {
 
   .main-header .content .nav-bar .right-nav-bar i {
     margin-left: 4px;
-  }
-  .main-header .content .nav-bar ul li a {
-    text-decoration: none;
-    color: #03264c;
-    font-size: calc(8px + 0.6vw);
   }
 
   .main-header .content .burger-menu {
@@ -392,7 +393,7 @@ a {
   }
 
   .main-main .content .main-article .article-cards:hover {
-    width: 48%;
+    width: 47%;
     box-shadow: 0px 0px 12px rgb(70, 70, 70);
   }
 
@@ -445,7 +446,7 @@ a {
   }
 
   .main-main .content .main-article .article-cards:hover {
-    width: 24%;
+    width: 23%;
   }
 
   /* Final Main Desktop */
@@ -495,6 +496,8 @@ a {
   padding: 35px 25px;
   gap: 8px;
   margin-bottom: 25px;
+  border: #03264c solid 2px;
+  border-radius: 4px;
 }
 
 .register-main .sign-in input {
@@ -626,6 +629,10 @@ a {
 
 /* Final estilos register */
 
+
+
+
+
 /* Inicio estilos login */
 
 .login-main {
@@ -644,11 +651,15 @@ a {
   align-items: center;
   gap: 10px;
   padding: 35px 10px;
-  margin-bottom: 25px;                            
+  margin-bottom: 25px;
+  border: #03264c solid 2px;
+  border-radius: 4px;
 }
 
 .login-main .login label {
   font-weight: 500;
+  padding-bottom: 3px;
+  border-bottom: #03264c solid 1.5px;
 }
 
 .login-main .login input {
