@@ -1,20 +1,14 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
+const controller = require('../controllers/main.controller')
 
 /* GET home page. */
-router.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/home.html"))
-});
+router.get('/', controller.showHome);
 
 /* GET register page. */
-router.get('/register', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/register.html"))
-});
+router.get('/register', controller.showRegister);
 
 /* GET login page. */
-router.get('/login', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/login.html"))
-});
+router.get('/login', controller.showLogin);
 
 module.exports = router;

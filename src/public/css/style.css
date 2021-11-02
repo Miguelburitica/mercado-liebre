@@ -137,7 +137,9 @@ a {
 /* Final Header */
 
 .banner {
+  margin: 0 auto;
   width: 100%;
+  max-width: 1600px;
 }
 
 .banner img {
@@ -173,6 +175,7 @@ a {
 
 .main-main .content .main-article .title-section {
   color: #666;
+  font-weight: 200;
   font-size: 30px;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -302,26 +305,42 @@ a {
 
   /* Inicio Header Tablet */
 
+  .main-header .content {
+  height: 120px;
+}
+
   .main-header .content .top-bar{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 
   .main-header .content .top-bar .top-top-bar {
-    width: 61%;
+    width: 72%;
+    justify-content: space-evenly;
     display: flex;
     align-items: center;
   }
 
-  .main-header .content .top-bar .top-top-bar .search {
-    height: 18px;
+  .main-header .content .top-bar .top-top-bar a {
+    height: 50px;
+    width: 29%;
   }
 
+  .main-header .content .top-bar .top-top-bar a img{
+    height: 100%;
+  }
+
+  .main-header .content .top-bar .top-top-bar .search {
+    height: 18px;
+    width: 68%
+  }
+
+
   .main-header .content .top-bar .buy-header {
-    width: 32%;
-    font-size: calc(8px + 0.6vw);
+    width: 25%;
+    font-size: calc(6px + 0.3vw);
   }
 
   .main-header .content .nav-bar {
@@ -342,14 +361,14 @@ a {
 
   .main-header .content .nav-bar ul li {
     padding: 4px calc(3px + 0.15vw) 4px calc(3px + 0.15vw);
-    color: #03264c;
-    transition: .4s ease all;
+    color: #03264c90;
+    transition: .3s ease all;
     cursor: pointer;
     font-size: calc(8px + 0.6vw);
   }
 
   .main-header .content .nav-bar ul li:hover {
-    background-color: #ddbe24;
+    color: #03264c;
   }
 
   .main-header .content .nav-bar .left-nav-bar {
@@ -412,7 +431,7 @@ a {
   }
 
   .main-header .content .top-bar .buy-header {
-    font-size: calc(12px + 0.6vw);
+    font-size: calc(10px + 0.6vw);
   }
 
   .main-header .content .nav-bar ul li {
