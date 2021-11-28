@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/main.controller')
+const path = require('path');
 
-/* GET home page. */
-router.get('/', controller.showHome);
+const productRoutes = require(path.resolve(__dirname, './product.routes.js'));
+const userRoutes = require(path.resolve(__dirname, './user.routes.js'));
+const webRoutes = require(path.resolve(__dirname, './web.routes.js'));
 
-/* GET register page. */
-router.get('/register', controller.showRegister);
-
-/* GET login page. */
-router.get('/login', controller.showLogin);
+router.use('/', webRoutes);
+router.use('/user', userRoutes);
+router.use('/product', productRoutes);
 
 module.exports = router;

@@ -1,0 +1,21 @@
+<%- include('./partials/head')  %> 
+    <body>
+<%- include('./partials/nav-bar')  %> 
+        
+        <div class="banner">
+            <img src="/images/img-home-banner.jpg" alt="Banner mercado Liebre">
+        </div>
+        <main class="login-main">
+            <h2 class="title">Ingresá</h2>
+            <form action="/" class="login">
+                <label for="nickname">Nombre de usuaria(o)</label>
+                <input type="text" name="nickname" id="nickname" placeholder="Pepepirez" required>
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" placeholder="contraseña123?" required>
+                <a href="#"><span>¿Olvidaste tu contraseña?</span></a>
+                <button type="submit"><span>Ingresar</span></button>
+            </form>
+        </main>
+        <<%- include('./partials/footer')  %> 
+        </body>
+    </html>
