@@ -33,7 +33,10 @@ const model = {
 		fs.writeFileSync(path.resolve(__dirname, '../data/products'), JSON.stringify(products, null, 4));
 	},
 
-	addProduct: function (product) {
+	addProduct: function (req) {
+		let product = {
+			...req.body,
+		};
 		const newProducts = this.getProducts().push(product);
 		this.updateProducts(newProducts);
 	},
