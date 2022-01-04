@@ -1,0 +1,28 @@
+<%- include('../partials/head') %>
+<body>
+	<%- include('../partials/nav-bar') %>
+
+	<main class="detail-main main">
+		<div class="container">
+			<div class="detail-header">
+				<div class="ilustration">
+					<img src="/images/products/<%= product.image %>" alt="ilustración de <%= product.name%>" >
+				</div>
+				<div class="suggest" style="display: flex; width: 100%;">
+					<%- include('../partials/groupOfProducts') %> 
+				</div>
+			</div>
+			<div class="detail-body"><div class="">
+				<h3><%= product.name %></h3>
+				<p>Puntuada con un <%= product.rating %> ð</p>
+				<p>Encuentrala desde $<%= product.price %></p>
+				<div class="delivery">
+					Envio
+				</div>
+				<p><%= product.description %></p>
+			</div>
+		</div>
+	</main>
+
+	<%- include('../partials/footer') %>
+</body>

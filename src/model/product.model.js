@@ -2,19 +2,31 @@ const fs = require('fs');
 const path = require('path');
 
 const model = {
+	// get the major id
+	lastId: function () {
+		let lastId = 0;
+		this.getProducts().forEach((product) => (lastId = parseInt(product.id) > lastId ? product.id : lastId));
+		return lastId;
+	},
+
+	// get the major id plus 1
 	newId: function () {
-		let nId = 0;
-		let products = this.getProducts();
-		products.forEach((element) => {
-			if (nId <= element.id) {
-				nId = element.id;
-			}
-		});
-		return nId + 1;
+		let lastId = 0;
+		this.getProducts().forEach((product) => (lastId = parseInt(product.id) > lastId ? product.id : lastId));
+		return (parseInt(lastId) + 1).toString();
 	},
 
 	getProducts: function () {
 		return JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'), 'utf8'));
+	},
+
+	// get some products in an array
+	getSomeProducts: function (callBack) {
+		return this.getProducts().filter(callBack);
+	},
+
+	getOne: function (id) {
+		return this.getProducts().find((product) => product.id == id);
 	},
 
 	updateProducts: function (products) {

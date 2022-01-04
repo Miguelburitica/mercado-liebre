@@ -7,7 +7,7 @@ const userRoutes = require(path.resolve(__dirname, './user.routes.js'));
 const webRoutes = require(path.resolve(__dirname, './web.routes.js'));
 
 router.use('/', webRoutes);
-router.use('/user', userRoutes);
-router.use('/product', productRoutes);
+router.use('/users', userRoutes);
+router.use('/products', productRoutes);
 
 module.exports = router;

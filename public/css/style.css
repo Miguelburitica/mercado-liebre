@@ -116,18 +116,16 @@ a {
 	font-size: 20px;
 	width: 42px;
 	height: 44px;
-	padding: 11px 12px;
 	border-radius: 15%;
 	margin-top: 5px;
 	transition: 0.3s ease all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .main-header .content .burger-menu:hover {
-	margin-top: 3px;
-	width: 48px;
-	height: 50px;
-	padding: 12px 13px;
-	font-size: 24px;
+	transform: scale(1.2);
 	background-color: #0550ba;
 }
 
@@ -177,35 +175,42 @@ a {
 	margin-bottom: 15px;
 }
 
-.main-main .content .main-article .article-cards {
-	background-color: white;
+.main-main .content .main-article .content-article {
 	width: 95%;
+	height: 370px;
+}
+
+.main-main .content .main-article .content-article .article-cards {
+	background-color: white;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	text-align: left;
 	transition: 0.3s ease all;
+	border-radius: 1px 1px 5px 5px;
 	margin-bottom: 15px;
 }
 
-.main-main .content .main-article .article-cards:hover {
-	box-shadow: 0px 0px 12px rgb(70, 70, 70);
-	width: 96%;
+.main-main .content .main-article .content-article .article-cards:hover {
+	box-shadow: 0px 6px 10px rgba(150, 150, 150, 0.6);
+	cursor: pointer;
 }
 
-.main-main .content .main-article .article-cards img {
+.main-main .content .main-article .content-article .article-cards img {
 	width: 80%;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article {
 	border: solid 1px #ebebeb;
 	padding: 15px;
 	width: 100%;
 	position: relative;
+	border-radius: 0px 0px 5px 5px;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article i {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article i {
 	display: block;
 	font-size: 16px;
 	padding: 5px;
@@ -221,32 +226,32 @@ a {
 	transition: 0.5s ease-in-out all;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article i:hover {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article i:hover {
 	transform: rotate(-810deg);
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article .for-pay {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article .for-pay .precios {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay .precios {
 	width: 40%;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article .for-pay .off {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay .off {
 	color: #39b54a;
 	width: 60%;
 }
 
-.main-main .content .main-article .article-cards .caracteristics-article .descripcion {
+.main-main .content .main-article .content-article .article-cards .caracteristics-article .descripcion {
 	position: absolute;
 	transition: opacity 0s ease, margin-top 0.2s ease;
 	opacity: 0;
 }
 
-.main-main .content .main-article .article-cards:hover .caracteristics-article .descripcion {
+.main-main .content .main-article .content-article .article-cards:hover .caracteristics-article .descripcion {
 	position: relative;
 	opacity: 1;
 	color: #666;
@@ -400,7 +405,7 @@ a {
 	.main-main .content .main-article {
 		flex-direction: row;
 		justify-content: space-around;
-		align-items: stretch;
+		align-items: flex-start;
 		flex-wrap: wrap;
 	}
 
@@ -409,15 +414,19 @@ a {
 		text-align: left;
 	}
 
-	.main-main .content .main-article .article-cards {
-		box-shadow: 0px 0px 15px rgb(180, 180, 180);
+	.main-main .content .main-article .content-article {
 		width: 47%;
+		height: 310px;
+	}
+
+	.main-main .content .main-article .content-article .article-cards {
+		box-shadow: 0px 0px 10px rgba(180, 180, 180, 0.4);
+		width: 100%;
 		transition: 0.15s ease all;
 	}
 
-	.main-main .content .main-article .article-cards:hover {
-		width: 47%;
-		box-shadow: 0px 6px 15px rgb(150, 150, 150);
+	.main-main .content .main-article .content-article .article-cards:hover {
+		box-shadow: 0px 6px 10px rgba(150, 150, 150, 0.6);
 	}
 
 	/* Final Main Tablet */
@@ -459,24 +468,24 @@ a {
 		max-width: 1000px;
 	}
 
-	.main-main .content .main-article .article-cards {
+	.main-main .content .main-article .content-article {
+		width: 24%;
+	}
+
+	.main-main .content .main-article .content-article .article-cards {
 		min-width: 18%;
-		width: 23%;
+		width: 100%;
 	}
 
-	.main-main .content .main-article .article-cards:hover {
-		width: 23%;
-	}
-
-	.main-main .content .main-article .article-cards .caracteristics-article .for-pay .precios {
+	.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay .precios {
 		width: fit-content;
 	}
 
-	.main-main .content .main-article .article-cards .caracteristics-article .for-pay .off {
+	.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay .off {
 		width: fit-content;
 	}
 
-	.main-main .content .main-article .article-cards .caracteristics-article .for-pay {
+	.main-main .content .main-article .content-article .article-cards .caracteristics-article .for-pay {
 		max-width: 144px;
 		width: 100%;
 	}
