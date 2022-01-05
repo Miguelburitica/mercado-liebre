@@ -4,6 +4,6 @@ const path = require('path');
 
 const { productController } = require(path.resolve(__dirname, '../controllers'));
 
-router.get('/detail/:id', productController.getDetail);
+router.get('/:id', productController.getDetail);
 
 module.exports = router;
