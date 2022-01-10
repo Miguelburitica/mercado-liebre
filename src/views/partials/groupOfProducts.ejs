@@ -1,8 +1,12 @@
 <% for (let i = 0; i < suggest.length; i++) { %>
     <article class="control-article">
         <img src="/images/products/<%= suggest[i].image%>" alt="<%= suggest[i].name %>" />
-        <p class="product-name"><%= suggest[i].name %></p>
-        <p Class="price">Desde $<%= suggest[i].price %></p>
+        <del class="price">$<%= suggest[i].price %> </del>
+        <div class="spoiler">
+            <p class="priceoff">$<%= suggest[i].price - (suggest[i].price*(suggest[i].discount/100)) %>  </p>
+            <p class="off">  <%= suggest[i].discount %> % OFF</p>
+        </div>
+        <p class="name"><%= suggest[i].name %></p>
     </article>
     <a href="/products/detail/<%= suggest[i].id %>"></a>
 <% }%>

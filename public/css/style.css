@@ -837,12 +837,45 @@ a {
 	align-items: center;
 	justify-content: center;
 	margin: 20px 0;
+	gap: 15px;
 }
 
 .suggest .control-article {
-	width: 100%;
+	width: 94%;
 	display: flex;
 	flex-direction: column;
+	border: #22aa00 solid 1px;
+	background-color: #fff;
+	align-items: center;
+	padding: 15px;
+}
+
+.suggest .control-article img {
+	width: 80%;
+}
+
+.suggest .control-article .price {
+	align-self: flex-start;
+	color: #4449;
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.control-article .spoiler {
+	align-self: flex-start;
+	display: flex;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.control-article .spoiler .priceoff {
+	font-size: 18px;
+}
+
+.control-article .spoiler .off {
+	color: #39b54a;
+	align-self: center;
+	font-size: 12px;
 }
 
 /* BEM Final suggest products */
