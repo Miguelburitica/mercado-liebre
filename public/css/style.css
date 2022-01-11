@@ -844,14 +844,29 @@ a {
 	width: 94%;
 	display: flex;
 	flex-direction: column;
-	border: #22aa00 solid 1px;
+	border: #ddd solid 1px;
+	border-radius: 4px;
+	overflow: hidden;
 	background-color: #fff;
 	align-items: center;
-	padding: 15px;
+	position: relative;
+}
+
+.suggest .control-article:hover {
+	box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .suggest .control-article img {
-	width: 80%;
+	width: 100%;
+	border-bottom: #ddd solid 1px;
+}
+
+.suggest .control-article .body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
 }
 
 .suggest .control-article .price {
@@ -859,6 +874,11 @@ a {
 	color: #4449;
 	font-size: 12px;
 	margin-bottom: 4px;
+	display: none;
+}
+
+.suggest .control-article:hover .price {
+	display: flex;
 }
 
 .control-article .spoiler {
@@ -876,6 +896,16 @@ a {
 	color: #39b54a;
 	align-self: center;
 	font-size: 12px;
+}
+
+.control-article .body .name {
+	font-weight: 300;
+}
+
+.control-article a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 /* BEM Final suggest products */
